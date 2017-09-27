@@ -10,7 +10,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Moonlington/FloSelfbot/commands"
+	"FloSelfbot/commands"
+
 	"github.com/patrickmn/go-cache"
 
 	"github.com/BurntSushi/toml"
@@ -117,6 +118,9 @@ func main() {
 	commandhandler.AddCommand("dog", "Fun", &commands.Dog{})
 	commandhandler.AddCommand("react", "Fun", &commands.React{})
 	commandhandler.AddCommand("poll", "Fun", &commands.Poll{})
+	commandhandler.AddCommand("bool", "Fun", &commands.Boolin{})
+	commandhandler.AddCommand("aesthetic", "Fun", &commands.Aesthetic{})
+	commandhandler.AddCommand("ascii", "Fun", &commands.Ascii{})
 
 	commandhandler.AddCommand("serverinfo", "Information", &commands.Sinfo{})
 	commandhandler.AddCommand("userinfo", "Information", &commands.Uinfo{})

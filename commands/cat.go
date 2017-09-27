@@ -28,7 +28,7 @@ func (m *Cat) message(ctx *Context) {
 	json.Unmarshal(body, &catpic)
 	if err != nil || catpic.Link == "" {
 		em := createEmbed(ctx)
-		em.Description = "Sorry, cat broke."
+		em.Description = "Sorry, cat machine :b:roke."
 		ctx.SendEm(em)
 	}
 

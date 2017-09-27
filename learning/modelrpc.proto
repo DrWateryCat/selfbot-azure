@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package learning;
+
+message LearningRequest {
+    string input = 1;
+    int32 length = 2;
+}
+
+message LearningResult {
+    string response = 1;
+    float error = 2;
+}
+
+service Learning {
+    rpc Train(LearningRequest) returns (LearningResult) {}
+}
